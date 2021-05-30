@@ -2,7 +2,7 @@ lua << EOF
 vim.g.colors_name = "one-nvim"
 
 if vim.o.background == "dark" then
-     --[[ 
+     --[[
           Dark Colors
           @syntax-hue:          220;
           @syntax-saturation:   13%;
@@ -23,15 +23,15 @@ if vim.o.background == "dark" then
      hue_5_2       = {"#be5046", 131, "hue_5_2"} -- hsl(  5, 48%, 51%);
      hue_6         = {"#d19a66", 247, "hue_6"}   -- hsl( 29, 54%, 61%);
      hue_6_2       = {"#e5c07b", 180, "hue_6_2"} -- hsl( 39, 67%, 69%);
-     syntax_bg     = {"#282c34",  17, "syntax_bg"}     -- hsl(@syntax-hue, @syntax-saturation, @syntax-brightness);
+     syntax_bg     = {"#1e2127",  17, "syntax_bg"}     -- hsl(@syntax-hue, @syntax-saturation, @syntax-brightness);
      syntax_gutter = {"#636d83", 241, "syntax_gutter"} -- darken(@syntax-fg, 26%);
-     syntax_cursor = {"#2c323c",  23, "syntax_cursor"} 
+     syntax_cursor = {"#2c323c",  23, "syntax_cursor"}
      syntax_accent = {"#528bff",  69, "syntax_accent"} -- hsl(@syntax-hue, 100%, 66% );
      vertsplit     = {"#181a1f", 234, "vertsplit"}
      special_grey  = {"#3b4048", 238, "special_grey"}
      visual_grey   = {"#3e4452",  59, "visual_grey"}
      pmenu         = {"#333841",  59, "pmenu"}
-     term_black    = {"#282c34",  17, "term_black"}
+     term_black    = {"#1e2127",  17, "term_black"}
      term_blue     = {"#61afef",  75, "term_blue"}
      term_cyan     = {"#56b6c2", 247, "term_cyan"}
      term_white    = {"#dcdfe4", 188, "term_white"}
@@ -39,8 +39,8 @@ if vim.o.background == "dark" then
      syntax_color_added    = {"#43d08a", 78, "syntax_color_added"}     -- hsl(150,  60%, 54%);
      syntax_color_modified = {"#e0c285", 250, "syntax_color_modified"} -- hsl(40,   60%, 70%);
      syntax_color_removed  = {"#e05252", 244, "syntax_color_removed"}   -- hsl(0,    70%, 60%);
-else 
-     --[[ 
+else
+     --[[
           Light Colors
           @syntax-hue:          230;
           @syntax-saturation:   1%;
@@ -79,7 +79,7 @@ else
      syntax_color_removed  = {"#ff1414", 88, "syntax_color_removed"}  -- hsl(0,    100%, 54%);
 end
 
--- Common 
+-- Common
 local pink = {"#d291e4", 251, "pink"}
 syntax_color_renamed  = {"#33a0ff", 75, "syntax_color_renamed"}  -- hsl(208, 100%, 60%);
 
@@ -148,10 +148,10 @@ local highlight_groups = {
      FoldColumn   = { fg = mono_3, bg = syntax_cursor },
      IncSearch    = { fg = hue_6, bg = mono_3 },
      LineNr       = { fg = mono_4 },
-     CursorLineNr = { fg = mono_1, bg = syntax_cursor },
-     MatchParen   = { fg = hue_5, bg = syntax_cursor, style = 'underline,bold' },
+     CursorLineNr = { fg = mono_1, bg = pmenu, style = 'bold' },
+     MatchParen   = { fg = hue_5, bg = syntax_cursor, style = 'bold' },
      Italic       = { fg = none, style = 'italic'},
-     ModeMsg      = { fg = mono_1 },
+     ModeMsg      = { fg = mono_1, style = 'bold' },
      MoreMsg      = { fg = mono_1 },
      NonText      = { fg = mono_3 },
      PMenu        = { fg = none, bg = pmenu },
@@ -516,7 +516,7 @@ local highlight_groups = {
      pythonStringDelimiter = { fg = hue_4 },
      pythonSymbol          = { fg = hue_1 },
 
--- Ruby 
+-- Ruby
      rubyBlock                     = { fg = hue_3 },
      rubyBlockParameter            = { fg = hue_5 },
      rubyBlockParameterList        = { fg = hue_5 },
