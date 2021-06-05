@@ -25,11 +25,12 @@ if vim.o.background == "dark" then
      hue_6_2       = {"#e5c07b", 180, "hue_6_2"} -- hsl( 39, 67%, 69%);
      syntax_bg     = {"#1e2127",  17, "syntax_bg"}     -- hsl(@syntax-hue, @syntax-saturation, @syntax-brightness);
      syntax_gutter = {"#636d83", 241, "syntax_gutter"} -- darken(@syntax-fg, 26%);
-     syntax_cursor = {"#2c323c",  23, "syntax_cursor"}
+     syntax_cursor = {"#2c313a",  23, "syntax_cursor"}
      syntax_accent = {"#528bff",  69, "syntax_accent"} -- hsl(@syntax-hue, 100%, 66% );
-     vertsplit     = {"#181a1f", 234, "vertsplit"}
+     vertsplit     = {"#383c44", 234, "vertsplit"}
      special_grey  = {"#3b4048", 238, "special_grey"}
      visual_grey   = {"#3e4452",  59, "visual_grey"}
+     float_accent  = {"#2d3139",  59, "float_accent"}
      pmenu         = {"#333841",  59, "pmenu"}
      term_black    = {"#1e2127",  17, "term_black"}
      term_blue     = {"#61afef",  75, "term_blue"}
@@ -132,7 +133,7 @@ local highlight_groups = {
     -- Syntax Groups (descriptions and ordering from `:h w18`) --
     -------------------------------------------------------------
      Normal       = normal,
-     NormalFloat  = normal,
+     NormalFloat  = { fg = none, bg = float_accent },
      bold         = { style = 'bold'},
      ColorColumn  = { fg = none, bg = syntax_cursor },
      Conceal      = { fg = mono_4, bg = syntax_bg },
@@ -155,7 +156,7 @@ local highlight_groups = {
      MoreMsg      = { fg = mono_1 },
      NonText      = { fg = mono_3 },
      PMenu        = { fg = none, bg = pmenu },
-     PMenuSel     = { fg = none, bg = mono_4 },
+     PMenuSel     = { fg = syntax_cursor, bg = hue_2 },
      PMenuSbar    = { fg = none, bg = syntax_bg },
      PMenuThumb   = { fg = none, bg = mono_1 },
      Question     = { fg = hue_2 },
