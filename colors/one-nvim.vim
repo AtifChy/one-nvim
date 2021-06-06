@@ -149,7 +149,7 @@ local highlight_groups = {
      FoldColumn   = { fg = mono_3, bg = syntax_cursor },
      IncSearch    = { fg = hue_6, bg = mono_3 },
      LineNr       = { fg = mono_4 },
-     CursorLineNr = { fg = mono_1, bg = pmenu, style = 'bold' },
+     CursorLineNr = { fg = mono_1, bg = syntax_cursor, style = 'bold' },
      MatchParen   = { fg = hue_5, bg = syntax_cursor, style = 'bold' },
      Italic       = { fg = none, style = 'italic'},
      ModeMsg      = { fg = mono_1, style = 'bold' },
